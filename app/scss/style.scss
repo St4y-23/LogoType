@@ -1,6 +1,156 @@
+@import "global";
 @import "vars";
 @import "libs";
 @import "fonts";
+
+
+// HEADER
+.preheader{
+	background-color: #303030;
+}
+.preheader__inner{
+  display: flex;
+  justify-content: space-between;
+  @include f400;
+  height: 45px;
+  align-items: center;
+}
+.preheader__phone{
+	padding-left: 25px;
+	position: relative;
+	a{
+		color: #d3d2d2;
+	}
+	&:before{
+		color: $yellow;
+		position: absolute;
+		left: 0;
+		font-family: 'icomoon';
+		content: "\f095";
+		font-size: 14px;
+	}
+}
+.preheader__email{
+	margin-left: 33px;
+	margin-right: auto;
+	padding-left: 25px;
+	position: relative;
+	a{
+		color: #d3d2d2;
+	}
+	&:before{
+		color: $yellow;
+		position: absolute;
+		left: 0;
+		font-size: 14px;
+	}
+}
+.preheader__btn{
+	padding-left: 49px;
+	background-color: $yellow;
+	position: relative;
+	a{
+		padding: 14px 20px 14px 0;
+		font-size: 16px;
+		color: #1b1b1b;
+	}
+	&:before{
+		color: #1b1b1b;
+		position: absolute;
+		left: 20px;
+		top: 13px;
+		font-size: 18px;
+	}
+}
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	height: 93px;
+	align-items: center;
+}
+.header__logo{
+	@include f100;
+	font-size: 30px;
+	color: #212020;
+	span{
+		font-weight: 500;
+		color: $yellow;
+	}
+}
+.header__menu{
+	ul{
+		display: flex;
+	}
+	a{
+		padding: 10px 16px;
+		border: 2px solid transparent;
+		transition: all .5s;
+	}
+	a:hover{
+		border: 2px solid $yellow;
+	}
+	li + li{
+		margin-left: 11px;
+	}
+}
+
+// SLIDER
+// .slider-top__images-rectangle{
+// 	background-color: #000;
+// 	width: 100%;
+// 	height: 497px;
+// 	opacity: .471;
+// 	position: absolute;
+// }
+.slider-top__images{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 497px;
+	position: absolute;
+}
+.slider-top__form-inner{
+	margin: 0 auto;
+	max-width: 688px;
+	text-align: center;
+}
+.slider-top__title{
+	text-transform: uppercase;
+	margin-top: 128px;
+	margin-bottom: 30px;
+	color: #fff;
+	font-size: 30px;
+	@include f500;
+}
+.slider-top__text{
+	color: #d3d2d2;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+.slider-top__btn{
+	display: inline-block;
+	position: relative;
+	a{
+		@include f500;
+		color: #fff;
+		padding: 13px 21px;
+		border-top: 1px solid $yellow;
+		border-left: 1px solid $yellow;
+		border-bottom: 1px solid $yellow;
+	}
+	&::before{
+		position: absolute;
+		right: -20px;
+		top: 0;
+		padding: 14px 8px;
+		background-color: $yellow;
+	}
+}
+
+
+
+
 
 
 
