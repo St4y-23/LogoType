@@ -146,14 +146,14 @@
 	@include f500;
 		color: #fff;
 		padding: 13px 21px;
-		border-top: 1px solid $yellow;
-		border-left: 1px solid $yellow;
-		border-bottom: 1px solid $yellow;
+		border-top: 2px solid $yellow;
+		border-left: 2px solid $yellow;
+		border-bottom: 2px solid $yellow;
 	&::before{
 		position: absolute;
 		right: -20px;
-		top: -1px;
-		padding: 14px 8px;
+		top: -2px;
+		padding: 15px 8px;
 		background-color: $yellow;
 	}
 }
@@ -227,7 +227,10 @@
 }
 
 // ABOUT
-
+.about__inner{
+	height: 300px;
+	margin-bottom: 40px;
+}
 .about__img{
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -261,8 +264,76 @@
 	margin-bottom: 35px;
 }
 
-
-
+// CONSULTATION
+.consultation__inner{
+	display: flex;
+	justify-content: flex-start;
+}
+.consultation__inner-border{
+	width: 106px;
+	height: 2px;
+	background-color: $yellow;
+	margin-top: 12px;
+}
+.consultation__inner-wrapper{
+	max-width: 390px;
+	margin-left: 30px;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+.consultation__inner-title{
+	font-size: 24px;
+}
+.consultation__wrapper{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.consultation__form-inner{
+	form{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.consultation__form-name{
+	margin-bottom: 15px;
+	input,
+	select{
+		width: 262px;
+		height: 38px;
+		border: 1px solid $grey;
+	}
+}
+.consultation__form-text{
+	margin-bottom: 10px;
+	@include f500;
+}
+.consultation__form-msg{
+	margin-left: 28px;
+	margin-right: auto;
+	textarea{
+		width: 555px;
+		height: 196px;
+		border: 1px solid $grey;
+		margin-bottom: 35px;
+		resize: none;
+	}
+	button{
+		background-color: #fff;
+		color: #000;
+		cursor: pointer;
+	}
+}
+.consultation__form-btn{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 18px;
+}
+.consultation__inner-img{
+	position: absolute;
+	right: 0;
+	top: -105px;
+}
 
 
 
