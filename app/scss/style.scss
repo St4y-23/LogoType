@@ -169,6 +169,7 @@
 	margin-bottom: 65px;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 }
 .services__inner-border{
 	width: 106px;
@@ -290,6 +291,7 @@
 	position: relative;
 }
 .consultation__form-inner{
+	margin-bottom: 30px;
 	form{
 		display: flex;
 		justify-content: space-between;
@@ -302,6 +304,7 @@
 		width: 262px;
 		height: 38px;
 		border: 1px solid $grey;
+		padding-left: 15px;
 	}
 }
 .consultation__form-text{
@@ -317,6 +320,8 @@
 		border: 1px solid $grey;
 		margin-bottom: 35px;
 		resize: none;
+		padding-left: 15px;
+		padding-top: 10px;
 	}
 	button{
 		background-color: #fff;
@@ -333,7 +338,74 @@
 	position: absolute;
 	right: 0;
 	top: -105px;
+	z-index: -2;
 }
+
+// ADVANTAGES
+.advantages__inner{
+	position: relative;
+	height: 287px;
+	margin-bottom: 65px;
+}
+.advantages__img{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 1920px;
+	height: 287px;
+	position: absolute;
+	z-index: -1;
+}
+.advantages__rectangle{
+	background-color: #000;
+	width: 100%;
+	height: 287px;
+	opacity: .3;
+	position: absolute;
+	z-index: -1;
+}
+.advantages__wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.advantages__item{
+	max-width: 340px;
+	color: #fff;
+	text-align: center;
+}
+.advantages__item-logo{
+	margin-top: 55px;
+	margin-bottom: 34px;
+	width: 36px;
+	height: 36px;
+	border: 2px solid $yellow;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	&::before{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.advantages__item-title{
+	font-size: 18px;
+	margin-bottom: 20px;
+	line-height: 24px;
+}
+.advantages__item-text{
+	color: #d3d2d2;
+	line-height: 24px;
+}
+
+// NEWS
+.news__inner-btn{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
 
 
 
