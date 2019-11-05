@@ -345,7 +345,6 @@
 .advantages__inner{
 	position: relative;
 	height: 287px;
-	margin-bottom: 65px;
 }
 .advantages__img{
 	background-repeat: no-repeat;
@@ -400,11 +399,123 @@
 }
 
 // NEWS
+.news{
+	background-color: #f9f9f9;
+	height: 750px;
+	padding-top: 65px;
+}
+.news{
+	.slick-prev.slick-arrow,
+	.slick-next.slick-arrow,{
+		position: absolute;
+		padding: 15px 17px;
+		border: 1px solid #dadada;
+		color: #9e9c9c;
+		background-color: transparent;
+		bottom: -90px;
+		cursor: pointer;
+	}
+	.slick-next.slick-arrow{
+		right: 46%;
+	}
+	.slick-prev.slick-arrow{
+		left: 46%;
+	}
+	.slick-prev{
+		transition: all .3s;
+	}
+	.slick-next{
+		transition: all .3s;
+	}
+	.slick-prev:focus,
+	.slick-next:focus,
+	.slick-prev:hover,
+	.slick-next:hover{
+		background-color: $yellow;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.slick-list.draggable{
+		padding-top: 7px;
+		height: 367px;
+	}
+}
+.news__inner{
+	height: 360px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 110px;
+}
 .news__inner-btn{
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
+.news__item{
+	margin-left: 14px;
+	margin-right: 14px;
+}
+.news__item-big{
+	box-shadow: 0px 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
+	width: 553px;
+	height: 341px;
+	background-color: #fff;
+	padding: 0 35px 45px 70px;
+}
+.news__item-big__marker{
+	display: inline-block;
+	color: #fff;
+	margin-bottom: 30px;
+	padding: 10px 25px;
+	background-color: $yellow;
+}
+.news__item-big__title{
+	margin-bottom: 15px;
+	line-height: 24px;
+	color: $black;
+	font-size: 18px;
+}
+.news__item-big__text{
+	margin-bottom: 30px;
+	line-height: 18px;
+}
+.news__item-big__author{
+	color: $black;
+}
+.news__item-small{
+	width: 262px;
+	height: 341px;
+}
+.news__item-img{
+	top: 1px;
+	position: relative;
+	width: 262px;
+	height: 190px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 20px;
+}
+.news__item-date{
+	margin-top: -1px;
+	padding: 30px 5px 12px 5px;
+	background-color: $yellow;
+	color: #fff;
+	display: inline-block;
+	font-weight: 700;
+	margin-left: 10px;
+}
+.news__item-title{
+	@include f500;
+	color: #242424;
+	margin-bottom: 15px;
+}
+.news__item-text{
+	font-size: 14px;
+	line-height: 18px;
+
+}
+
 
 
 
