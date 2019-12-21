@@ -6,6 +6,9 @@ $(function(){
         slidesToScroll: 1,
         centerMode: false,
         variableWidth: false,
+				fade: true,
+				prevArrow: '<button type="button" class="slick-prev icon-angle-left"></button>',
+        nextArrow: '<button type="button" class="slick-next icon-angle-right"></button>',
       });
 
     $('.news__inner').slick({

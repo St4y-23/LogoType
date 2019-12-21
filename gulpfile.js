@@ -58,7 +58,7 @@ gulp.task('browser-sync', function() {
     server: {
        baseDir: "app/"
 		},
-		// tunnel: true,
+		// tunnel: 'mydev',
 		host: "192.168.0.104"
   });
 });
