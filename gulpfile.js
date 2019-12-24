@@ -16,7 +16,7 @@ gulp.task('scss', function(){
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
-      browsers: ['last 8 versions']
+      overrideBrowserslist: ['last 8 versions']
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'))
@@ -55,9 +55,11 @@ gulp.task('js', function(){
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-      server: {
-          baseDir: "app/"
-      }
+    server: {
+       baseDir: "app/"
+		},
+		// tunnel: 'mydev',
+		host: "192.168.0.104"
   });
 });
 
@@ -86,4 +88,4 @@ gulp.task('watch', function(){
 
 gulp.task('build', gulp.series('clean', 'export'))
 
-gulp.task('default', gulp.parallel('css' ,'scss', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('watch', 'css' ,'scss', 'js', 'browser-sync'));
