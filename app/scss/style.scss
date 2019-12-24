@@ -84,6 +84,8 @@
 	}
 }
 .header__menu{
+	position: relative;
+	z-index: 3;
 	ul{
 		display: flex;
 	}
@@ -98,6 +100,38 @@
 	li + li{
 		margin-left: 11px;
 	}
+}
+.ham {
+  cursor: pointer;
+  transition: transform 400ms;
+	user-select: none;
+	display: none;
+	margin-right: -18px;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:$yellow;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
 }
 
 // SLIDER
@@ -133,6 +167,28 @@
 		background-color: $yellow;
 		color: #fff;
 		border: 1px solid #fff;
+	}
+	.slick-dots{
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		button{
+			display: none;
+		}
+		li{
+			margin: 5px;
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: #fff;
+		}
+		.slick-active{
+			background-color: $text;
+			border: 3px solid #fff;
+		}
 	}
 }
 .slider-top__images-rectangle{
@@ -223,13 +279,17 @@
 }
 .services__items{
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 33px;
+	justify-content: center;
+	flex-wrap: wrap;
+	// margin-bottom: 33px;
+	margin-left: -30px;
 }
 .services__item{
+	margin-left: 30px;
+	margin-bottom: 30px;
 	text-align: center;
 	width: 360px;
-	height: 365px;
+	min-height: 365px;
 	background-color: $white;
 	box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
 	padding: 27px 35px 40px;
@@ -266,7 +326,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	width: 1920px;
+	// width: 1920px;
 	height: 300px;
 	// position: absolute;
 	margin-bottom: 40px;
@@ -375,28 +435,29 @@
 // ADVANTAGES
 .advantages__inner{
 	position: relative;
-	height: 287px;
+	min-height: 287px;
 }
 .advantages__img{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	width: 1920px;
-	height: 287px;
-	position: absolute;
+	width: 100%;
+	min-height: 287px;
+	position: relative;
 	z-index: -1;
 }
 .advantages__rectangle{
 	background-color: #000;
 	width: 100%;
-	height: 287px;
+	height: 100%;
 	opacity: .3;
 	position: absolute;
 	z-index: -1;
 }
 .advantages__wrapper{
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .advantages__item{
 	max-width: 340px;
@@ -427,6 +488,7 @@
 .advantages__item-text{
 	color: #d3d2d2;
 	line-height: 24px;
+	margin-bottom: 20px;
 }
 
 // NEWS
@@ -467,6 +529,29 @@
 	.slick-list.draggable{
 		padding-top: 7px;
 		height: 367px;
+	}
+	.slick-dots{
+		position: absolute;
+		bottom: -70px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		button{
+			display: none;
+		}
+		li{
+			margin: 5px;
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: $text;
+			cursor: pointer;
+		}
+		.slick-active{
+			background-color: #fff;
+			border: 3px solid $text;
+		}
 	}
 }
 .news__inner{
@@ -547,7 +632,7 @@
 // FOOTER
 .footer-bg{
 	background-color: #595959;
-	height: 339px;
+	min-height: 339px;
 }
 .footer__inner{
 	display: flex;
@@ -607,12 +692,13 @@
 }
 .footer-down{
 	background-color: #303030;
-	height: 30px;
+	min-height: 30px;
 	text-align: center;
 	color: #fff;
 	@include f400;
 	font-size: 12px;
 	line-height: 30px;
+	padding: 0 10px;
 }
 
 
